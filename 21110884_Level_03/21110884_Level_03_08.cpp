@@ -12,6 +12,8 @@ int pow(int x, int y) {
     }
     return result;
 }
+// trường hợp có chữ số 0 đứng đầu không viết ngược vì nếu viêt ngược thì nó thực sự vô lí
+// 02132 = 0000002132
 int reverse_number(int n) {
     int re_num = 0;
     int count = 0;
