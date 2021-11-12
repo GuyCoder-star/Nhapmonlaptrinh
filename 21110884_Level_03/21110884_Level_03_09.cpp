@@ -5,20 +5,19 @@
 #include <math.h>
 #include <string.h>
 
-int GCD(int a, int b) {
-    int GCD = 1;
-    int max = a;
-    
-    if(a < b) {
-        max = b;
+int min(int a, int b) {
+    if (a > b) {
+        return b;
     }
+    return a;
+}
 
-   for (int i = 1; i <= max; i++) {
-        if(a % i == 0 && b % i == 0) {
-            GCD  = i;
+int GCD(int a, int b) {
+    for (int i = min(a, b); i > 0; i--) {
+        if (a % i == 0 && b % i == 0) {
+            return i;
         }
-    }
-    return GCD;
+    }   
 }
 int main() {
     int a, b;
