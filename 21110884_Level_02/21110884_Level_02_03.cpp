@@ -13,13 +13,10 @@ int main() {
     printf("nhap c: "); scanf("%d", &c);
     min = a;
     if (min > b) {
-        min = b;
-        if (min > c)
-            min = c;
+        min  = b;
     }
-    else {
-        if (min > c)
-            min = c;
+    if (min > c) {
+        min = c;
     }
     printf("gia tri nho nhat trong 3 so %d, %d, %d la min = %d", a, b, c, min);
     return 0;
